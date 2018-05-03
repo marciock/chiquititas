@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+</head>
+<body>
+  <h1>Date</h1>
+
+  <script>
+    // Bom dia, hoje é Sabado, 14 de Maio de 2016
+
+    function saudacao(data) {
+      var h = data.getHours();
+      if (h < 12) {
+        return 'Bom dia';
+      }
+      if (h < 18) {
+        return 'Boa tarde';
+      }
+      return 'Boa noite';
+    }
+
+    function diaSemana1(data) {
+      var dia = data.getDay();
+      switch(dia) {
+        case 0: return 'Domingo';
+        case 1: return 'Segunda-feira';
+        case 2: return 'Terça-feira';
+        case 3: return 'Quarta-feira';
+        case 4: return 'Quinta-feira';
+        case 5: return 'Sexta-feira';
+        case 6: return 'Sábado';
+      }
+    }
+
+    function diaSemana2(data) {
+      var dias = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+      return dias[data.getDay()];
+    }
+
+    function mes(data) {
+      var meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Julho', 'Junho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+      return meses[data.getMonth()];
+    }
+
+    function saida(data) {
+      var saida = '{saudacao}: {semana}, {dia} de {mes} de {ano}';
+      saida = saida.replace('{saudacao}', saudacao(data));
+      saida = saida.replace('{semana}', diaSemana1(data));
+      saida = saida.replace('{dia}', data.getDate());
+      saida = saida.replace('{mes}', mes(data));
+      saida = saida.replace('{ano}', data.getFullYear());
+      return saida;
+    }
+
+    var d = new Date(1998,03,01,11,59,59);
+    console.log(saida(d));
+
+    d.setMonth(2);
+    console.log(saida(d));
+
+    d = new Date();
+    console.log(saida(d));
+
+    console.log(d.toLocaleString());
+
+    /*var saida = '';
+    saida += saudacao(d);
+    saida += ', hoje é ';
+    saida += diaSemana2(d);
+    saida += ', ';
+    saida += d.getDate();
+    saida += ' de ';
+    saida += mes(d);
+    saida += ' de ';
+    saida += d.getFullYear();
+    console.log(saida);*/
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

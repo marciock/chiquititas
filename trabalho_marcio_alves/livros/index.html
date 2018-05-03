@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="dbs.js"></script>
+    <script src="pessoa.js"></script>
+    <script src="cliente.js"></script>
+    <script src="vendedor.js"></script>
+    <script src="livro.js"></script>
+    <script src="ebook.js"></script>
+    <script src="impresso.js"></script>
+    <script src="venda.js"></script>
+    <script src="loja.js"></script>
+  </head>
+  <body>
+
+    <h1>Alfa Livros</h1>
+
+      <div>
+        <div>
+          <label>Usuário</label>
+        </div>
+        <div >
+          <select id="cliente">
+          </select><button type="button" id="select_cliente">selecionar</button>
+        </div>
+      </div>
+      <hr>
+
+      <div>
+        <h2>Venda</h2>
+        <div>
+          <label>Vendedor:</label>
+        </div>
+        <div >
+          <select id="vendedor">
+          </select><button type="button" id="select_vendedor">selecionar</button>
+        </div>
+        <div>
+          <label>Escolha um modelo de venda</label>
+        </div>
+        <div>
+          <select id="modelo">
+            <option value="">Escolha os Livros</option>
+            <option value="ebook">Ebook</option>
+            <option value="impresso">Impressor</option>
+          </select>
+        </div>
+        <div id="lista">
+
+        </div>
+        <div>
+          <button style="button" id="btLista">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <div>
+        <hr>
+        <h2> Carrinho de Compras (Venda)</h2>
+          <div >
+            <p id="nome_cliente"></p>
+          <div>
+          <div >
+            <p id="nome_vendedor"></p>
+          <div>
+            <h3>Lista de Produtos</h3>
+          </div>
+          <div id="produtos">
+
+
+          </div>
+          <hr>
+          <div>
+            <button type="button" id="venda">Comprar</button>
+          </div>
+          <h2 id="total"><!-- total --></!--></h2>
+        </div>
+
+
+
+
+
+
+  </body>
+</html>

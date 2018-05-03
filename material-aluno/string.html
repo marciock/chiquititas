@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+</head>
+<body>
+  <h1>HTML Base</h1>
+
+  <script>
+  	var a = "Sabado 14 de Maio de 2016";
+  	//console.log(a);
+  	//console.log('length', a.length);
+
+  	var b = new String('a') + new String('b');
+  	//console.log(b);
+
+  	var c = 'chiquitto@gmail.com';
+
+  	//console.log(c.indexOf('@@'));
+
+  	var d,e;
+
+  	d = c.replace('i', '-');
+  	d = c.replace(/i/g, '');
+
+  	d = c.split('i');
+  	d = c.split(/@|i/);
+
+  	d = c.substr(9, 5);
+  	d = c.substring(9, 14);
+
+  	e = c.indexOf('@');
+  	d = c.substr(0, e); // pegar nome
+
+  	d = c.toUpperCase();
+
+  	console.log(d);
+  </script>
+</body>
+</html>
+
+
+
+
